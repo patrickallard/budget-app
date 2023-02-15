@@ -1,0 +1,128 @@
+{
+  "accounts": [
+    {
+      "id": 3,
+      "name": "Lolzpalz",
+      "type": "Savings",
+      "balance": 250630
+    },
+    {
+      "id": 4,
+      "name": "Heffers",
+      "type": "Checking",
+      "balance": 665
+    }
+  ],
+  "budgets": [
+    {
+      "id": 2,
+      "name": "Nougat",
+      "associate": 4,
+      "total": 1482
+    },
+    {
+      "id": 3,
+      "name": "Kitten Mittens",
+      "associate": 3,
+      "total": 907
+    }
+  ],
+  "transactions": [
+    {
+      "id": 0,
+      "date": "2022-12-05T23:26:36.666Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "",
+      "withdrawlDebits": 8000
+    },
+    {
+      "id": 1,
+      "date": "2022-12-07T19:29:51.993Z",
+      "source": "Lolzpalz",
+      "destination": "",
+      "budget": "Kitten Mittens",
+      "withdrawlDebits": 40
+    },
+    {
+      "id": 2,
+      "date": "2022-12-07T20:06:00.716Z",
+      "source": "",
+      "destination": "Heffers",
+      "budget": "Kitten Mittens",
+      "withdrawlDebits": 3840
+    },
+    {
+      "id": 3,
+      "date": "2022-12-07T21:04:03.614Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "Nougat",
+      "withdrawlDebits": 900
+    },
+    {
+      "id": 4,
+      "date": "2022-12-07T21:04:39.650Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "Nougat",
+      "withdrawlDebits": 3
+    },
+    {
+      "id": 5,
+      "date": "2022-12-07T21:07:41.679Z",
+      "source": "",
+      "destination": "Heffers",
+      "budget": "Nougat",
+      "withdrawlDebits": 55
+    },
+    {
+      "id": 6,
+      "date": "2022-12-07T21:10:27.911Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "Nougat",
+      "withdrawlDebits": 60
+    },
+    {
+      "id": 7,
+      "date": "2022-12-07T21:11:57.162Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "Nougat",
+      "withdrawlDebits": 340
+    },
+    {
+      "id": 8,
+      "date": "2022-12-07T21:12:57.302Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "Kitten Mittens",
+      "withdrawlDebits": 504
+    },
+    {
+      "id": 9,
+      "date": "2022-12-07T21:23:09.710Z",
+      "source": "",
+      "destination": "Heffers",
+      "budget": "Nougat",
+      "withdrawlDebits": 45
+    },
+    {
+      "id": 10,
+      "date": "2022-12-07T23:57:55.583Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "Nougat",
+      "withdrawlDebits": 348
+    },
+    {
+      "id": 11,
+      "date": "2022-12-07T23:58:46.608Z",
+      "source": "",
+      "destination": "Lolzpalz",
+      "budget": "Nougat",
+      "withdrawlDebits": 435
+    }
+  ]
+}

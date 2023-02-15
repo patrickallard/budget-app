@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>New Budget</mat-card-title>
+      <mat-form-field appearance="fill" class="small">
+        <div class="example-container">
+          <mat-form-field hintLabel="Name of Budget" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput maxlength=" " placeholder="Ex. Nougat" [(ngModel)]="name" #budgetname="ngModel">
+            <div *ngIf="budgetname.errors?.['required']">
+                Name required
+            </div>
+          </mat-form-field>
+          <mat-form-field hintLabel="Initial Deposit" appearance="fill">
+          <!-- Need to add error handling and make sure that a non-zero integer is entered -->
+            <mat-label>Amount</mat-label>
+            <input type="number" matInput maxlength="10" placeholder="$1,000" [(ngModel)]="amount" #amountEntered="ngModel">
+            <div *ngIf="amountEntered.errors?.['required']">
+              Amount required
+          </div>
+          </mat-form-field>
+        </div>
+      </mat-form-field>
+    </mat-card-header>
+    <mat-card-actions align="start">
+      <button mat-button color='warn' [hidden]="amountEntered.errors?.['required'] || budgetname.errors?.['required']"(click)="ui.createNewBud(name, amount)"><mat-icon>done</mat-icon></button>
+      <button mat-button color='warn'(click)="ui.stopNewBud()"><mat-icon>cancel</mat-icon></button>
+    </mat-card-actions>
+</mat-card>

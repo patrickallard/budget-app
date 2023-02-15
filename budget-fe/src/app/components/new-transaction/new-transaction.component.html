@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>New Transaction</mat-card-title>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Source</mat-label>
+        <mat-select name="source" [(ngModel)]="selectedSource" #source="ngModel">
+          <mat-option value="">   </mat-option>
+          <mat-option *ngFor="let a of accountNames" [value]="a" type="string">
+            {{a}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Destination</mat-label>
+        <mat-select name="destination" [(ngModel)]="selectedDestination" #destination="ngModel">
+          <mat-option value="">   </mat-option>
+          <mat-option *ngFor="let a of accountNames" [value]="a" type="string">
+            {{a}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <!-- Not sure why this is not working. Could have something to do with the click event -->
+    <div *ngIf="source.errors?.['blank'] && destination.errors?.['blank']">
+      A source or destination is required
+    </div>
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Budget</mat-label>
+            <mat-select [(ngModel)]="budget">
+              <mat-option value="">   </mat-option>
+             <!-- <mat-option *ngIf="destination" ng-style="{'color': budgetNames.color"> {{ budgetNames }}</mat-option> -->
+              <mat-option *ngFor="let b of budgetNames" [value]="b" type="string">
+                  {{b}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field hintLabel="Initial Deposit" appearance="fill">
+          <!-- Need to add error handling and make sure that a non-zero integer is entered -->
+            <mat-label>Amount</mat-label>
+            <input type="number" [(ngModel)]="amount" matInput placeholder="$1,000">
+          </mat-form-field>
+        </div>
+    <mat-card-actions>
+      <button mat-button color='warn' mat-dialog-close (click)="ui.createNewTransaction(date, selectedSource, selectedDestination, budget, amount)"><mat-icon>done</mat-icon></button>
+      <button mat-button color='warn' mat-dialog-close><mat-icon>cancel</mat-icon></button>
+    </mat-card-actions>

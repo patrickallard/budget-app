@@ -1,0 +1,21 @@
+<app-header></app-header>
+<app-transaction-log *ngIf="ui.getShowLog()"></app-transaction-log>
+<app-new-account *ngIf="ui.getShowNewAcc()"></app-new-account>
+<app-new-budget *ngIf="ui.getShowNewBudget()"></app-new-budget>
+<div class="column">
+    <div class="row">
+        <div *ngIf="ui.isShowAccounts()">
+            <h2>Accounts</h2>
+            <app-account *ngFor="let account of ui.getAccounts()" [account]="account"></app-account>
+        </div>
+    </div>
+</div>
+<div class="column">
+    <div class="row">
+        <div *ngIf="ui.isShowBudgets()">
+            <h2>Budgets</h2>
+            <!-- ngFor a strutural directive that renders a template for each item in a collection -->
+            <app-budget *ngFor="let budget of ui.getBudgets()" [budget]="budget"></app-budget>
+        </div>
+    </div>
+</div>

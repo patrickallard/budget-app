@@ -1,0 +1,10 @@
+<mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{ account?.name }}</mat-card-title>
+      <mat-card-subtitle> Balance: {{ account?.balance | currency : 'USD' : 'symbol' }} </mat-card-subtitle>
+      <mat-card-subtitle>{{ account?.type }} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end">
+      <button mat-button color='warn' (click)="ui.deleteAccount(account?.id)"><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+</mat-card>

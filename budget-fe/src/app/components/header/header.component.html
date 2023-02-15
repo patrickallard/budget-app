@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <button (click)="ui.showHome()" mat-icon-button class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon">
+    <mat-icon>home</mat-icon>
+  </button>
+  <div>
+    <span class="title">Budget App</span>
+  </div>
+  <span class="small-spacer"></span>
+  <div *ngIf="!ui.showLog">
+    <button mat-button (click)="ui.isStartNewAcc()">New Account</button>
+  </div>
+  <div *ngIf="!ui.showLog">
+    <button mat-button (click)="ui.isStartNewBudget()">New Budget</button>
+  </div>
+  <div>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Transactions</button>
+  </div>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item (click)="ui.isShowLog()">History</button>
+  </mat-menu>
+  <span class="example-spacer"></span>
+  <button (click)="ui.refresh()" mat-icon-button class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon">
+    <mat-icon>refresh</mat-icon>
+  </button>
+</mat-toolbar>

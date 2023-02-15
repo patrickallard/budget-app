@@ -1,0 +1,23 @@
+.demo-table {
+    width: 100%;
+    min-width: 300px;
+    overflow: auto;
+}
+  
+.demo-button-container {
+    padding-bottom: 16px;
+    margin-top: 5px;
+}
+  
+.demo-button + .demo-button {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.filter {
+    margin-top: 20px;
+}
+
+.small-spacer {
+    flex: 1 auto;
+}

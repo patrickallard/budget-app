@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card {
+  margin-top: 10px;
+}
