@@ -5,9 +5,9 @@ The budget project was designed to be a lightweight, streamlined application to 
 transactions associated with that particular user in a comprehensive list. 
 
 ## Technology Used
-### 1. Angular
-### 2. Spring Boot
-### 3. Docker 
+1. Angular
+2. Spring Boot
+ 3. Docker 
 
 ## Database Scheme
 The database is made up of three entities: Accounts, Budgets, and Transactions. Accounts and Budgets are associated with Transactions in a One-to-Many bidirectional relationship. Below is rough sketch of the relationships I drew up when starting the project to help me visualize how the entities mapped to one another.  
